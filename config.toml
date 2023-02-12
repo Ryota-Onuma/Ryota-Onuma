@@ -47,7 +47,7 @@ description = "Ryota Onuma's portfolio site"
       xhtml = false
   [markup.highlight]
     anchorLineNos = false
-    codeFences = true
+    codeFences = false
     guessSyntax = true
     hl_Lines = ''
     hl_inline = false

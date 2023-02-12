@@ -44,12 +44,13 @@ Go における良い命名とは、
 -   すべてのソースコードを通じてユニークである必要はない
     -   もしパッケージ名の衝突が起きる場合、 エイリアスをつければ OK
 
-```go
+{{< highlight go >}}
 import (
     tauth "hoge/fuga/twitter/auth"
     fauth "hoge/fuga/facebook/auth"
 )
-```
+{{< / highlight >}}
+
 
 -   パッケージのコードの中で使う関数名などは、パッケージ名を考慮して名付ける
     -   `パッケージ名 + 関数名`で 1 セット関数名でパッケージ名を繰り返さない
@@ -62,27 +63,27 @@ import (
 
 -   基本的には`method名 + er`
 
-```go
+{{< highlight go >}}
 type Reader interface {
     Read(p []byte) (n int, err error)
 }
-```
+{{< / highlight >}}
 
 -   英語としておかしくても気にしなくていい
 
-```go
+{{< highlight go >}}
 type Execer interface {
     Exec(query string, args []Value) (Result, error)
 }
-```
+{{< / highlight >}}
 
 -   英語的な語順を使って良い感じにすることもある
 
-```go
+{{< highlight go >}}
 type ByteReader interface {
     ReadByte() (c byte, err error)
 }
-```
+{{< / highlight >}}
 
 -   インターフェイスが複数のメソッドを持つ時は、インターフェイスの目的をうまく表す命名をする
     -   例: net.Conn, http.ResponseWriter, io.ReadWrite
@@ -93,12 +94,12 @@ type ByteReader interface {
 -   Getter 名に`Get`はつけない。例えば、`owner`という unexported な field があったとして、その Getter は`Owener()`となる
 -   Setter 名には`Set`をつける。例えば、`owner`という unexported な field があったとして、その Setter は`SetOwener()`となる
 
-```go
+{{< highlight go >}}
 owner := obj.Owner()
 if owner != user {
     obj.SetOwner(user)
 }
-```
+{{< / highlight >}}
 
 ## 関数名
 
@@ -108,19 +109,19 @@ if owner != user {
 
 -   型名が説明的である場合は、引数名は簡潔に
 
-```go
+{{< highlight go >}}
 func AfterFunc(d Duration, f func()) *Timer
 
 func Escape(w io.Writer, s []byte)
-```
+{{< / highlight >}}
 
 -   型名が曖昧な場合は引数名を説明的に
 
-```go
+{{< highlight go >}}
 func Unix(sec int64) Time
 
 func HasPrefix(prefix []byte) bool
-```
+{{< / highlight >}}
 
 ## 戻り値名
 
@@ -136,12 +137,12 @@ func HasPrefix(prefix []byte) bool
     -   `httpClient`と`DBCreator` は両方とも`c`
 -   命名は基本的にキャメルケースだが、元々略語として浸透している単語は一貫した大文字と小文字を使用
 
-```go
+{{< highlight go >}}
 ACL,API,ASCII,CPU,CSS,DNS,EOF,GUID,HTML,HTTP,
 HTTPS,ID,IP,JSON,LHS、QPS、RAM、RHS、RPC、SLA、
 SMTP、SQL、SSH、TCP、TLS、TTL,UDP,UI,UID,UUID,
 URI,URL,UTF8,VM,XML,XMPP,XSRF,XSS
-```
+{{< / highlight >}}
 
 -   変数名は宣言から離れた場所で使用される名前ほど、より説明的な名前にする必要がある
 
@@ -157,9 +158,9 @@ URI,URL,UTF8,VM,XML,XMPP,XSRF,XSS
 
 以下のように特定のキーが存在するかどうかをチェックする際には ok という変数名を使うのが慣例
 
-```go
+{{< highlight go >}}
 id, ok := tweets[tweetID]
-```
+{{< / highlight >}}
 
 # 書き方など
 
@@ -186,13 +187,13 @@ id, ok := tweets[tweetID]
         -   初期値は non-nil で zero-length
         -   ただし、[]string{} を JSON にエンコードするときとかはこっちが良い
 
-```go
+{{< highlight go >}}
 // good
 var t []string
 
 // bad
 t := []string{}
-```
+{{< / highlight >}}
 
 ## 引数
 
@@ -206,7 +207,7 @@ t := []string{}
 -   エラーハンドリングを即座に行うことで、ネストを浅くする
     -   ネストが浅い = 読み手が理解しやすい
 
-```go
+{{< highlight go >}}
 // Bad
 if x, err := f(); err != nil {
     // error handling
@@ -222,29 +223,29 @@ if err != nil {
     return
 }
 // use x
-```
+{{< / highlight >}}
 
 もしくはこの書き方も OK
 
-```go
+{{< highlight go >}}
 // Good
 if err := f(); err != nil {
     // error handling
     return
 }
-```
+{{< / highlight >}}
 
 ## コードが長い時は`:=`をつかわないで型を明確にする
 
 -   長いコードになってくると読み手にとって`:=`はどんどん辛くなる
 -   型を指定することで見やすくなる
 
-```go
+{{< highlight go >}}
 func main(){
   var x int = 2020
   //do something
 }
-```
+{{< / highlight >}}
 
 ## 不要な変数やインポートは書かない
 

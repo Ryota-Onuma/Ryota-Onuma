@@ -1,15 +1,14 @@
-baseURL = "http://example.org/"
+baseURL = "https://onuma-ryota.com"
 languageCode = "ja"
-title = "My New Hugo Site"
-licenselink = "https://github.com/pop-ketle/Hugo-Theme/blob/main/themes/UltraPop/LICENSE"
-description = "pop-ketle's theme for portfolio"
+title = "onuma-ryota.com"
+description = "Ryota Onuma's portfolio site"
 
 [taxonomies]
     tag = "tags"
 
 [author]
-  name = "pop-ketle"
-  homepage = ""
+  name = "Ryota Onuma"
+  homepage = "onuma-ryota.com"
 
 [markup]
   defaultMarkdownHandler = 'goldmark'

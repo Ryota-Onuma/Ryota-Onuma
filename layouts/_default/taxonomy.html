@@ -1,7 +1,9 @@
 {{ define "main" }}
     <div class="posts">
         <div class="title-wrapper">
-            <h1 class="title">#{{ strings.TrimSuffix "/" (strings.TrimPrefix "/tags/" .Page.RelPermalink) }}</h1>
+            <h1 class="title">
+                #{{ strings.TrimSuffix "/" (strings.TrimPrefix "/tags/" .Page.RelPermalink) }}
+            </h1>
         </div>
         <div class="articles">
             {{ range .Pages }}
@@ -33,7 +35,7 @@
                                 {{ end }}
                             </div>
                             <div class="article-summary">
-                                    {{ .Params.summary }}
+                                {{ .Params.summary }}
                             </div>
                         </div>
                         <div class="article-right">

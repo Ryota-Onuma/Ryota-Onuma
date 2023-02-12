@@ -20,11 +20,14 @@
             class="header-mobile-toggle-button"
             id="header-mobile-toggle-button"
         >
-        <div class="header-mobile-toggle-button-inner"  id="header-mobile-toggle-button-inner">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+            <div
+                class="header-mobile-toggle-button-inner"
+                id="header-mobile-toggle-button-inner"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
         <div class="header-mobile-inner hide" id="header-mobile-inner">
             <div class="header-link-container">
@@ -35,7 +38,9 @@
     </div>
     <script>
         const button = document.getElementById("header-mobile-toggle-button");
-        const inner = document.getElementById("header-mobile-toggle-button-inner");
+        const inner = document.getElementById(
+            "header-mobile-toggle-button-inner"
+        );
         const container = document.getElementById("header-mobile-inner");
 
         button.addEventListener("click", () => {

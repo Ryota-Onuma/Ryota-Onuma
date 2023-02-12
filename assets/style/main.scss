@@ -1,0 +1,33 @@
+@import "reset.scss";
+@import "common/color.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+body {
+    background: $BASE_BG_COLOR;
+    color: $WHITE;
+    font-family: "Noto Sans JP", sans-serif;
+    #main {
+        width: 65%;
+        min-height: calc(100vh - 60px);
+        height: 1px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    @media (max-width: 640px) {
+        #main {
+            width: 90%;
+            min-height: calc(100vh - 60px);
+            padding: 30px 0;
+            margin: 0 auto;
+        }
+    }
+}
+a {
+    color: $WHITE;
+}
+
+@import "common/header.scss";
+@import "common/footer.scss";
+@import "layouts/_default/list.scss";
+@import "layouts/custom/post.scss";
+@import "layouts/404.scss";
+@import "layouts/index.scss";

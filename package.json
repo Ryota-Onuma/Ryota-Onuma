@@ -1,0 +1,16 @@
+{
+  "name": "onuma-ryota",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --config .prettierrc.js --write \"./**/{*.js,*.html,*.scss,*.md}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}

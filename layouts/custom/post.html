@@ -1,0 +1,59 @@
+{{ define "main" }}
+    <div class="post">
+        <div class="blog-meta">
+            <div class="blog-img">
+                {{ if .Params.thumbnail_url }}
+                    <img
+                        src="{{ .Params.thumbnail_url }}"
+                        alt="thumnail"
+                        class="thumnail"
+                    />
+                {{ else }}
+                    <img
+                        src="/image/no-image.png"
+                        alt="thumnail"
+                        class="thumnail"
+                    />
+                {{ end }}
+            </div>
+            <h1 class="blog-title">{{ .Title }}</h1>
+            <div class="tag-container">
+                {{- if .Params.tags }}
+                    {{- range ($.GetTerms "tags") }}
+                        <a href="{{ .Permalink }}" class="tag"
+                            ># {{ .LinkTitle }}</a
+                        >
+                    {{- end }}
+                {{- end }}
+            </div>
+            <div class="blog-date">
+                <span>{{ .Date.Format "2006/01/02" }}</span>
+            </div>
+            <details class="blog-toc-container">
+                <summary class="blog-toc-summary" id="blog-toc-summary">
+                    【目次を開く】
+                </summary>
+                <div class="blog-toc">
+                    <h3 class="blog-toc-title">目次</h3>
+                    {{ .TableOfContents }}
+                </div>
+            </details>
+            <div class="blog-content">{{ .Content }}</div>
+        </div>
+    </div>
+    <script>
+        const summary = document.getElementById("blog-toc-summary");
+        const openJapanese = "【目次を開く】";
+        const closeJapanese = "【目次を閉じる】";
+        summary.addEventListener("click", () => {
+            if (summary.innerText === openJapanese) {
+                summary.innerText = closeJapanese;
+                return;
+            }
+            if (summary.innerText === closeJapanese) {
+                summary.innerText = openJapanese;
+                return;
+            }
+        });
+    </script>
+{{ end }}

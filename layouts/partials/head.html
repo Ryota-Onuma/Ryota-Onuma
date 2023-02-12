@@ -1,0 +1,12 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ .Title }}</title>
+    {{ hugo.Generator }}
+    {{ $style := resources.Get "style/main.scss" | toCSS |
+        minify | fingerprint
+    }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+    <link rel="stylesheet" href="/syntax.css" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+</head>

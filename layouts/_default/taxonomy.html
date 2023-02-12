@@ -1,0 +1,51 @@
+{{ define "main" }}
+    <div class="posts">
+        <div class="title-wrapper">
+            <h1 class="title">#{{ strings.TrimSuffix "/" (strings.TrimPrefix "/tags/" .Page.RelPermalink) }}</h1>
+        </div>
+        <div class="articles">
+            {{ range .Pages }}
+                <a href="{{ .Permalink }}">
+                    <div class="article">
+                        <div class="article-left">
+                            <div>
+                                <h2 class="article-title">{{ .Name }}</h2>
+                            </div>
+                            <div class="article-posted-date">
+                                <iconify-icon
+                                    icon="ic:round-access-time-filled"
+                                    width="18"
+                                    height="18"
+                                ></iconify-icon
+                                ><span class="date"
+                                    >{{ .Date.Format "2006-01-02" }}</span
+                                >
+                            </div>
+                            <div class="tag-container">
+                                {{ range $val := .Params.tags }}
+                                    <object>
+                                        <a
+                                            href="/tags/{{ $val | lower }}"
+                                            class="tag"
+                                            >#{{ $val }}</a
+                                        >
+                                    </object>
+                                {{ end }}
+                            </div>
+                            <div class="article-summary">
+                                    {{ .Params.summary }}
+                            </div>
+                        </div>
+                        <div class="article-right">
+                            <img
+                                src="{{ .Params.thumbnail_url }}"
+                                alt="{{ .Name }} image"
+                                class="article-image"
+                            />
+                        </div>
+                    </div>
+                </a>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

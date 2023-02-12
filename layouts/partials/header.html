@@ -1,0 +1,46 @@
+<header id="header">
+    <div class="header-pc">
+        <div class="header-wrapper">
+            <div class="header-left">
+                <a href="/">
+                    <img
+                        src="/image/buntyo.png"
+                        alt="buntyo"
+                        class="header-light-image"
+                    />
+                </a>
+            </div>
+            <div class="header-right">
+                <a href="/posts" class="header-link"> Posts </a>
+            </div>
+        </div>
+    </div>
+    <div class="header-mobile">
+        <div
+            class="header-mobile-toggle-button"
+            id="header-mobile-toggle-button"
+        >
+        <div class="header-mobile-toggle-button-inner"  id="header-mobile-toggle-button-inner">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </div>
+        <div class="header-mobile-inner hide" id="header-mobile-inner">
+            <div class="header-link-container">
+                <a href="/" class="header-link">Home</a>
+                <a href="/" class="header-link">Posts</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const button = document.getElementById("header-mobile-toggle-button");
+        const inner = document.getElementById("header-mobile-toggle-button-inner");
+        const container = document.getElementById("header-mobile-inner");
+
+        button.addEventListener("click", () => {
+            inner.classList.toggle("active");
+            container.classList.toggle("hide");
+        });
+    </script>
+</header>

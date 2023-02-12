@@ -18,13 +18,13 @@
             </div>
             <h1 class="blog-title">{{ .Title }}</h1>
             <div class="tag-container">
-                {{- if .Params.tags }}
-                    {{- range ($.GetTerms "tags") }}
+                {{ if .Params.tags }}
+                    {{ range ($.GetTerms "tags") }}
                         <a href="{{ .Permalink }}" class="tag"
                             ># {{ .LinkTitle }}</a
                         >
-                    {{- end }}
-                {{- end }}
+                    {{ end }}
+                {{ end }}
             </div>
             <div class="blog-date">
                 <span>{{ .Date.Format "2006/01/02" }}</span>

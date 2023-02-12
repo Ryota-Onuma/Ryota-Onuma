@@ -59,6 +59,8 @@ description = "Ryota Onuma's portfolio site"
     noHl = false
     style = 'modus-vivendi'
     tabWidth = 4
+
+    pygmentsUseClasses = false
   [markup.tableOfContents]
     endLevel = 3
     ordered = false

@@ -19,9 +19,9 @@
             <h1 class="blog-title">{{ .Title }}</h1>
             <div class="tag-container">
                 {{ if .Params.tags }}
-                    {{ range ($.GetTerms "tags") }}
-                        <a href="{{ .Permalink }}" class="tag"
-                            ># {{ .LinkTitle }}</a
+                    {{ range $tag := .Params.tags }}
+                        <a href="/tags/{{ lower $tag }}" class="tag"
+                            ># {{ $tag }}</a
                         >
                     {{ end }}
                 {{ end }}

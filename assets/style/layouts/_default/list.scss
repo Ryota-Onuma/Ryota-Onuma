@@ -125,6 +125,8 @@
                     }
                 }
                 .article-right {
+                    display: flex;
+                    justify-content: center;
                     width: 100%;
                     height: 250px;
                     .article-image {

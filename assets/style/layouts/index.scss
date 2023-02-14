@@ -1,5 +1,5 @@
 #top {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
 
 @media (max-width: 949px) {
     #top {
-        width: 100%;
+        width: 100vw;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -52,7 +52,7 @@
 
 @media (max-width: 640px) {
     #top {
-        width: 100%;
+        width: 100vw;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -62,12 +62,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-bottom: 100px;
+            padding-bottom: 80px;
             box-sizing: border-box;
             .title-wrap {
                 .title {
                     text-align: left;
-                    font-size: 36px;
+                    font-size: 24px;
                 }
                 .highlight {
                     color: $HIGHLIGHT_COLOR;

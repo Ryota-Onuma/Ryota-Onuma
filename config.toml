@@ -55,9 +55,9 @@ description = "Ryota Onuma's portfolio site"
     lineNoStart = 1
     lineNos = false
     lineNumbersInTable = true
-    noClasses = true
+    noClasses = false
     noHl = false
-    style = 'modus-vivendi'
+    # style = 'modus-vivendi'
     tabWidth = 4
 
     pygmentsUseClasses = false

@@ -94,12 +94,12 @@ type ByteReader interface {
 -   Getter 名に`Get`はつけない。例えば、`owner`という unexported な field があったとして、その Getter は`Owener()`となる
 -   Setter 名には`Set`をつける。例えば、`owner`という unexported な field があったとして、その Setter は`SetOwener()`となる
 
-{{< highlight go >}}
+```go
 owner := obj.Owner()
 if owner != user {
     obj.SetOwner(user)
 }
-{{< / highlight >}}
+```
 
 ## 関数名
 
@@ -245,7 +245,7 @@ func main(){
   var x int = 2020
   //do something
 }
-{{< / highlight >}}
+{{< / highlight >}}m
 
 ## 不要な変数やインポートは書かない
 

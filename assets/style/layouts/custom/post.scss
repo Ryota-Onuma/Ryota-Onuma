@@ -328,7 +328,6 @@
             code {
                 background-color: $BLACK;
                 padding: 6px;
-                word-break: break-all;
             }
     
             .highlight {
@@ -340,6 +339,7 @@
                 pre {
                     padding: 30px; 
                     box-sizing: border-box;
+                    overflow-x: auto;
                 }
             }
 

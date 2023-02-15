@@ -78,33 +78,33 @@
     }
 
     .blog-content {
-        .highlight {
-            width: 100%;
-            background-color: $BLACK;
-            margin: 20px 0;
-            padding: 0 40px;
-            box-sizing: border-box;
+        // .highlight {
+        //     width: 100%;
+        //     background-color: $BLACK;
+        //     margin: 20px 0;
+        //     padding: 0 40px;
+        //     box-sizing: border-box;
 
-            .chroma {
-                &::-webkit-scrollbar {
-                    display: none;
-                }
-                -ms-overflow-style: none; /* IE and Edge */
-                scrollbar-width: none; /* Firefox */
-            }
-            pre,
-            code {
-                font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
-                    monospace;
-                font-size: 1em;
-                overflow-x: auto;
-                &::-webkit-scrollbar {
-                    display: none;
-                }
-                -ms-overflow-style: none; /* IE and Edge */
-                scrollbar-width: none; /* Firefox */
-            }
-        }
+        //     .chroma {
+        //         &::-webkit-scrollbar {
+        //             display: none;
+        //         }
+        //         -ms-overflow-style: none; /* IE and Edge */
+        //         scrollbar-width: none; /* Firefox */
+        //     }
+        //     pre,
+        //     code {
+        //         font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+        //             monospace;
+        //         font-size: 1em;
+        //         overflow-x: auto;
+        //         &::-webkit-scrollbar {
+        //             display: none;
+        //         }
+        //         -ms-overflow-style: none; /* IE and Edge */
+        //         scrollbar-width: none; /* Firefox */
+        //     }
+        // }
 
         code {
             background-color: $BLACK;
@@ -341,31 +341,31 @@
         }
 
         .blog-content {
-            .highlight {
-                width: 100%;
-                overflow-x: auto;
-                padding: 0 15px;
-                box-sizing: border-box;
-                .chroma {
-                    &::-webkit-scrollbar {
-                        display: none;
-                    }
-                    -ms-overflow-style: none; /* IE and Edge */
-                    scrollbar-width: none; /* Firefox */
-                }
-                pre,
-                code {
-                    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
-                        monospace;
-                    font-size: 1em;
-                    overflow-x: auto;
-                    &::-webkit-scrollbar {
-                        display: none;
-                    }
-                    -ms-overflow-style: none; /* IE and Edge */
-                    scrollbar-width: none; /* Firefox */
-                }
-            }
+            // .highlight {
+            //     width: 100%;
+            //     overflow-x: auto;
+            //     padding: 0 15px;
+            //     box-sizing: border-box;
+            //     .chroma {
+            //         &::-webkit-scrollbar {
+            //             display: none;
+            //         }
+            //         -ms-overflow-style: none; /* IE and Edge */
+            //         scrollbar-width: none; /* Firefox */
+            //     }
+            //     pre,
+            //     code {
+            //         font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+            //             monospace;
+            //         font-size: 1em;
+            //         overflow-x: auto;
+            //         &::-webkit-scrollbar {
+            //             display: none;
+            //         }
+            //         -ms-overflow-style: none; /* IE and Edge */
+            //         scrollbar-width: none; /* Firefox */
+            //     }
+            // }
 
             img {
                 display: block;

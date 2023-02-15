@@ -87,10 +87,10 @@
         .highlight {
             code {
                 padding:0;
+                font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+                monospace;
             }
             pre {
-                font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
-                    monospace;
                 padding: 30px; 
                 box-sizing: border-box;
             }
@@ -334,10 +334,10 @@
             .highlight {
                 code {
                     padding:0;
+                    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+                    monospace;
                 }
                 pre {
-                    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
-                        monospace;
                     padding: 30px; 
                     box-sizing: border-box;
                 }
